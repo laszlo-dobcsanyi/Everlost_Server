@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3B0586C6-1E0F-44CA-930A-9B6E6C4979BB}</ProjectGuid>
+    <RootNamespace>Everlost_Server</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>D:\Visual Studio 2012\Everlost_Server\Everlost_Server;C:\boost_1_55_0;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\boost_1_55_0\stage\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Core\BattleQueue.cpp" />
+    <ClCompile Include="Core\Core.cpp" />
+    <ClCompile Include="Core\Gateway.cpp" />
+    <ClCompile Include="Core\Generator.cpp" />
+    <ClCompile Include="Core\Logger.cpp" />
+    <ClCompile Include="Core\Packet.cpp" />
+    <ClCompile Include="Core\Processor.cpp" />
+    <ClCompile Include="Core\Realm.cpp" />
+    <ClCompile Include="Core\Registry.cpp" />
+    <ClCompile Include="Game\Battle.cpp" />
+    <ClCompile Include="Game\Character.cpp" />
+    <ClCompile Include="Game\Connection.cpp" />
+    <ClCompile Include="Game\Connection_HandleMessage.cpp" />
+    <ClCompile Include="Game\Field.cpp" />
+    <ClCompile Include="Game\Field_Generated.cpp" />
+    <ClCompile Include="Game\Field_Loaded.cpp" />
+    <ClCompile Include="Game\Group.cpp" />
+    <ClCompile Include="Game\Group_Unifier.cpp" />
+    <ClCompile Include="Game\Item.cpp" />
+    <ClCompile Include="Game\Object.cpp" />
+    <ClCompile Include="Game\Region.cpp" />
+    <ClCompile Include="Game\Unit.cpp" />
+    <ClCompile Include="Game\World.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Core\BattleQueue.h" />
+    <ClInclude Include="Core\Gateway.h" />
+    <ClInclude Include="Core\Generator.h" />
+    <ClInclude Include="Core\ListLockable.hpp" />
+    <ClInclude Include="Core\ListProcessable.hpp" />
+    <ClInclude Include="Core\Logger.h" />
+    <ClInclude Include="Core\Macro.h" />
+    <ClInclude Include="Core\Packet.h" />
+    <ClInclude Include="Core\Processor.h" />
+    <ClInclude Include="Core\Realm.h" />
+    <ClInclude Include="Core\Registry.h" />
+    <ClInclude Include="Game\Battle.h" />
+    <ClInclude Include="Game\Character.h" />
+    <ClInclude Include="Game\Connection.h" />
+    <ClInclude Include="Game\Field.h" />
+    <ClInclude Include="Game\Field_Generated.h" />
+    <ClInclude Include="Game\Field_Loaded.h" />
+    <ClInclude Include="Game\Group.h" />
+    <ClInclude Include="Game\Group_Unifier.h" />
+    <ClInclude Include="Game\Item.h" />
+    <ClInclude Include="Game\Object.h" />
+    <ClInclude Include="Game\Region.h" />
+    <ClInclude Include="Game\Unit.h" />
+    <ClInclude Include="Game\World.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
